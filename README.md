@@ -5,7 +5,8 @@ Code repository for Udacity's [Firebase in a Weekend: Android](https://www.udaci
 ### Set-Up
 A new Firebase project is required. Go to [firebase.google.com](https://firebase.google.com/).
 
-#### Database
+### Realtime Database
+#### Data
 ```
 {
     "messages" : {
@@ -40,6 +41,10 @@ A new Firebase project is required. Go to [firebase.google.com](https://firebase
 ```
 Check out [Database Security Rules documentation](https://firebase.google.com/docs/database/security/) for more information.
 
-#### Authentication
+### Storage
+#### Files
+Create a folder called **chat_photos** in the `Storage` dashboard of [Firebase Cosole](https://console.firebase.google.com/).
+
+### Authentication
 - [Authentication in the Console](https://console.firebase.google.com/): Authenticate and manage users from a variety of providers
 - [FirebaseUI-Android](https://github.com/firebase/FirebaseUI-Android) on Github

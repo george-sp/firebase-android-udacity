@@ -45,6 +45,8 @@ dependencies {
     compile 'com.google.firebase:firebase-database:10.2.0'
     // Firebase Authentication
     compile 'com.google.firebase:firebase-auth:10.2.0'
+    // Firebase Storage
+    compile 'com.google.firebase:firebase-storage:10.2.0'
     // FirebaseUI Auth only
     compile 'com.firebaseui:firebase-ui-auth:1.2.0'
 }
