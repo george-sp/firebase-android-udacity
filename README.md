@@ -20,3 +20,7 @@ A new Firebase project is required. Go to [firebase.google.com](https://firebase
   }
 }
 ```
+
+#### Authentication
+- [Authentication in the Console](https://console.firebase.google.com/): Authenticate and manage users from a variety of providers
+- [FirebaseUI-Android](https://github.com/firebase/FirebaseUI-Android) on Github

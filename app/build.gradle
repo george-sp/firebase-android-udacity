@@ -43,6 +43,10 @@ dependencies {
 
     // Firebase Realtime Database
     compile 'com.google.firebase:firebase-database:10.2.0'
+    // Firebase Authentication
+    compile 'com.google.firebase:firebase-auth:10.2.0'
+    // FirebaseUI Auth only
+    compile 'com.firebaseui:firebase-ui-auth:1.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
