@@ -21,7 +21,6 @@ A new Firebase project is required. Go to [firebase.google.com](https://firebase
     }
 }
 ```
-
 #### Rules
 ```
 {
@@ -39,11 +38,25 @@ A new Firebase project is required. Go to [firebase.google.com](https://firebase
     }
 }
 ```
-Check out [Database Security Rules documentation](https://firebase.google.com/docs/database/security/) for more information.
+Check out [Firebase Realtime Database Security Documentation](https://firebase.google.com/docs/database/security/) for more information.
 
 ### Storage
 #### Files
 Create a folder called **chat_photos** in the `Storage` dashboard of [Firebase Cosole](https://console.firebase.google.com/).
+#### Rules
+```
+service firebase.storage {
+    match /b/friendlychat-c780d.appspot.com/o {
+        match /{imageId=**} {
+            allow read: if request.auth != null;
+            allow write: if request.auth != null && request.resource.size < 3 * 1024 * 1024;
+        }
+    }
+}
+
+```
+Check out [Firebase Storage Security Documentation](https://firebase.google.com/docs/storage/security/)
+and [Firebase Storage Security Rules Reference](https://firebase.google.com/docs/reference/security/storage/) for more information.
 
 ### Authentication
 - [Authentication in the Console](https://console.firebase.google.com/): Authenticate and manage users from a variety of providers
