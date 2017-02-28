@@ -61,3 +61,15 @@ and [Firebase Storage Security Rules Reference](https://firebase.google.com/docs
 ### Authentication
 - [Authentication in the Console](https://console.firebase.google.com/): Authenticate and manage users from a variety of providers
 - [FirebaseUI-Android](https://github.com/firebase/FirebaseUI-Android) on Github
+
+
+##### Notes on Security _(Realtime Database vs Storage)_
+> ------------------------------------------------------------------------------------------------------------------
+> Firebase Storage Security rule types: **_`read`, `write`_**
+> Firebase Realtime Database rule types: **_`.read`, `.write`, `.validate`_**
+> ------------------------------------------------------------------------------------------------------------------
+> Firebase Storage Security rules **are not** cascading
+> >_A value of true for a parent doesn't cause all children to be true._
+>
+> Firebase Realtime Database rules **are** cascading for `.read` and `.write`
+> >_A value of true for a parent applies all children below the point where the node was declared true._
