@@ -62,6 +62,16 @@ and [Firebase Storage Security Rules Reference](https://firebase.google.com/docs
 - [Authentication in the Console](https://console.firebase.google.com/): Authenticate and manage users from a variety of providers
 - [FirebaseUI-Android](https://github.com/firebase/FirebaseUI-Android) on Github
 
+### Notifications
+#### Steps
+- Add the gradle dependency for messaging
+- Go to the Notifications tab in the Firebase Console
+- Create your own message to send as notification
+- Send the notification __*__
+- See the notification on your Android device
+
+`* Make sure that the app is in the background before sending the notifiaction`
+
 
 ##### Notes on Security _(Realtime Database vs Storage)_
 > ------------------------------------------------------------------------------------------------------------------
