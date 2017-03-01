@@ -64,14 +64,27 @@ and [Firebase Storage Security Rules Reference](https://firebase.google.com/docs
 
 ### Notifications
 #### Steps
-- Add the gradle dependency for messaging
-- Go to the Notifications tab in the Firebase Console
-- Create your own message to send as notification
-- Send the notification __*__
-- See the notification on your Android device
+1. Add the gradle dependency for messaging
+2. Go to the Notifications tab in the Firebase Console
+3. Create your own message to send as notification
+4. Send the notification __*__
+5. See the notification on your Android device
 
 `* Make sure that the app is in the background before sending the notifiaction`
 
+### Remote Config
+#### Key Capabilities
+- Quickly roll out changes to your app's userbase
+- Customize your app for segments of your userbase
+- Run A/B tests to improve your app
+
+### Implementation Path
+1. Instrument your app wiith Remote Config
+2. Set default parameter values
+3. Add logic to fetch, activate and get parameter values
+4. Update service-side default and conditional parameter values
+
+[Firebase Remote Config docs](https://firebase.google.com/docs/remote-config/)
 
 ##### Notes on Security _(Realtime Database vs Storage)_
 > ------------------------------------------------------------------------------------------------------------------
