@@ -1,4 +1,4 @@
-# Firebase-Udacity
+# firebase-android-udacity
 Code repository for Udacity's [Firebase in a Weekend: Android](https://www.udacity.com/course/firebase-in-a-weekend-by-google-android--ud0352) course
 
 
@@ -17,7 +17,7 @@ A new Firebase project is required. Go to [firebase.google.com](https://firebase
         "-KdqtFtHUFCnUIfjRK-c" : {
             "name" : "user_2",
             "text" : "hi!"
-        }	
+        }
     }
 }
 ```
@@ -33,7 +33,7 @@ A new Firebase project is required. Go to [firebase.google.com](https://firebase
                     // the read and write rules cascade to the individual messages
                     // messages should have a 'name' and a 'text' key or a 'name' and 'photoUrl' key
                     ".validate": "newData.hasChildren(['name', 'text']) && !newData.hasChildren(['photoUrl']) || newData.hasChildren(['name', 'photoUrl']) && !newData.hasChildren(['text'])"
-                } 
+                }
           }
     }
 }
@@ -84,15 +84,17 @@ and [Firebase Storage Security Rules Reference](https://firebase.google.com/docs
 3. Add logic to fetch, activate and get parameter values
 4. Update service-side default and conditional parameter values
 
-[Firebase Remote Config docs](https://firebase.google.com/docs/remote-config/)
+Check out [Firebase Remote Config docs](https://firebase.google.com/docs/remote-config/) for more information.
 
-##### Notes on Security _(Realtime Database vs Storage)_
+> ##### Notes on Security _(Realtime Database vs Storage)_
 > ------------------------------------------------------------------------------------------------------------------
-> Firebase Storage Security rule types: **_`read`, `write`_**
-> Firebase Realtime Database rule types: **_`.read`, `.write`, `.validate`_**
-> ------------------------------------------------------------------------------------------------------------------
-> Firebase Storage Security rules **are not** cascading
-> >_A value of true for a parent doesn't cause all children to be true._
+> - Firebase Storage Security rule types: **_`read`_**, **_`write`_**
 >
-> Firebase Realtime Database rules **are** cascading for `.read` and `.write`
-> >_A value of true for a parent applies all children below the point where the node was declared true._
+> - Firebase Realtime Database rule types: **_`.read`_**, **_`.write`_**, **_`.validate`_**
+>
+> ------------------------------------------------------------------------------------------------------------------
+> - Firebase Storage Security rules **are not** cascading
+>   _`(A value of true for a parent doesn't cause all children to be true.)`_
+>
+> - Firebase Realtime Database rules **are** cascading for `.read` and `.write`
+>   _`(A value of true for a parent applies all children below the point where the node was declared true.)`_
